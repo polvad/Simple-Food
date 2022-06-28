@@ -46,14 +46,17 @@ dd {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
-  line-height: 0;
+  line-height: inherit;
 }
 
 button {
+  display: block;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 input,

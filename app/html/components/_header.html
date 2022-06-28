@@ -1,0 +1,59 @@
+
+  <header class="header">
+    <div class="container">
+        <nav class="header__inner">
+            <a class="header__logo logo" href="#">
+                <img class="logo__img" src="../../images/icons/SimpleFood.svg" width="200" height="39" alt="Логотип">
+            </a>
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link link" href="#">
+                        Главная
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link link" href="#">
+                        Блюда
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+            <div class="header__btn">
+                <form class="header__form">
+                    <input class="header__fild fild" type="search" placeholder="Искать..." required>
+                    <button class="header__search header__button" type="button">
+                        <svg class="header__icon">
+                            <use xlink:href="images/sprite.svg#icon-search"></use>
+                        </svg>
+                        <span class="sr-only">Искать на сайте</span>
+                    </button>   
+                </form>
+                <div class="basket">
+                    <span class="basket__name">
+                        Ваша корзина пуста
+                    </span>
+                    <button class="basket__close">
+                        <span class="sr-only">
+                            Закрыть корзину
+                        </span>
+                    </button>
+                    <p class="basket__text">
+                        Посмотрите наш каталог и выберите те товары, которые вас заинтересуют.
+                    </p>
+                    <a class="basket__link general__style" href="#">каталог</a>
+                </div>
+                    <button class="basket__btn header__button" type="button">
+                        <svg class="header__icon">
+                            <use xlink:href="images/sprite.svg#icon-cart"></use>
+                        </svg>
+                        <span class="header__order">4</span>
+                        <span class="sr-only">Корзина с товарами</span>
+                    </button>
+            </div>
+        </nav>
+    </div>
+  </header>
