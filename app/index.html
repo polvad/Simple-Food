@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../images/icons/Favicon.png">
+    <link rel="icon" type="image/png" href="../../images/icons/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/icons/favicon512x512.png" sizes="512x512">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Simple Food | Главная страница</title>
 </head>
@@ -21,7 +22,7 @@
             </a>
             <ul class="header__list">
                 <li class="header__item">
-                    <a class="header__link link" href="#">
+                    <a class="header__link header__link--active link" href="#">
                         Главная
                     </a>
                 </li>
@@ -39,7 +40,7 @@
             <div class="header__btn">
                 <form class="header__form">
                     <input class="header__fild fild" type="search" placeholder="Искать..." required>
-                    <button class="header__search header__button" type="button">
+                    <button class="header__search header__button" type="submit">
                         <svg class="header__icon">
                             <use xlink:href="images/sprite.svg#icon-search"></use>
                         </svg>
@@ -72,9 +73,9 @@
     </div>
   </header>
         <main class="main">
-            <section class="hero">
+            <section class="hero section">
   <div class="container">
-    <div class="hero__inner" style="background-image: url('../images/ScooterGuy.png');">
+    <div class="hero__inner">
        <div class="hero__content">
           <h1 class="hero__title">
               Доставка
@@ -98,6 +99,7 @@
               </li>
           </ul>
       </div>
+      <img class="hero__img" src="../../images/ScooterGuy.png" width="560" height="660" alt="Парень на скутере">
     </div>
      
   </div>
@@ -109,7 +111,7 @@
     </h2>
     <ul class="popular__list">
       <li class="popular__item">
-        <button class="popular__btn" type="button" data-filter=".category-a">
+        <button class="popular__btn popular__btn--active " type="button" data-filter=".category-a">
           <svg class="popular__icon">
             <use xlink:href="images/sprite.svg#icon-burger"></use>
           </svg>   
@@ -285,7 +287,7 @@
             </a>
             <form class="footer__form" action="#" name="subscribe">
               <input class="footer__fild fild" name="email" type="email" placeholder="Ваш email" required>
-              <button class="footer__subscribe general__style" type="button">
+              <button class="footer__subscribe general__style" type="submit">
                 <svg class="footer__icon">
                   <use xlink:href="images/sprite.svg#icon-frame"></use>
                 </svg>       
