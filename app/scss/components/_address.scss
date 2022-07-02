@@ -1,0 +1,36 @@
+.address {
+  &__list {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 2;
+
+    &:hover {
+      .address__icon {
+        stroke: $orange;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: stroke 0.6s;
+    stroke: $dark;
+    fill: transparent;
+  }
+
+}

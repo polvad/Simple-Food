@@ -1,14 +1,14 @@
 $( function() {
   
-  $('.header__search').on('click', function(){
-    $('.header__fild').toggleClass('active');
+  $('.user-nav__button--search').on('click', function(){
+    $('.form-search').toggleClass('active');
   });
 
-  $('.basket__btn').on('click', function(){
+  $('.user-nav__button--basket').on('click', function(){
     $('.basket').toggleClass('active');
   });
 
-  $('.basket__close').on('click', function(){
+  $('.close').on('click', function(){
     $('.basket').removeClass('active');
   });
   

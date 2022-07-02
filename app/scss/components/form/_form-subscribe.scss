@@ -1,0 +1,38 @@
+@import './field';
+
+.form-subscribe {
+  margin-right: 70px;
+
+  &__field {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__btn {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 13px 47px 13px 70px;
+    margin: 0;
+    transition: fill 0.6s;
+
+    &:hover {
+      .form-subscribe__icon {
+        fill: $orange;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 39px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    transition: fill 0.6s;
+  }
+
+}

@@ -1,0 +1,41 @@
+@import './form/form-search';
+@import './user-nav';
+@import './basket';
+
+.header {
+  
+  &__inner {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0px 60px 0;
+  }
+  
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.1;
+  }
+  
+  &__list {
+    display: flex;
+    margin-right: 58px;
+  }
+  
+  &__item {
+    
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+  
+  &__link.current {
+      color: $orange;
+    }
+  
+
+}

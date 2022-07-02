@@ -1,0 +1,48 @@
+@import './form/form-subscribe';
+@import './address';
+@import './user-nav';
+@import './social';
+
+.footer {
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 75px;
+    padding-bottom: 60px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    columns: 3 auto;
+  }
+
+  &__item {
+    padding-right: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__link {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+  }
+
+  &__copy {
+    display: block;
+    padding: 27px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+

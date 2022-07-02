@@ -1,0 +1,37 @@
+.basket {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  transform: translateX(150%);
+  width: 40vw;
+  padding: 60px 40px;
+  background-color: $silver100;
+  text-align: center;
+  border: 1px solid $gray;
+  transition: transform 0.6s;
+
+  &__name {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 25px;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+}

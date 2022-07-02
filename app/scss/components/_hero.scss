@@ -1,0 +1,47 @@
+.hero {
+  
+  &__inner {
+    height: calc(100vh - 279px);
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 47% 100%;
+  }
+
+  &__content {
+    width: 40%;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 1.3;
+    color: $darkblue;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__time {
+    color: $orange;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:first-child {
+    margin-right: 34px;
+  }
+
+  &__order {
+    padding: 12px 32px;
+    line-height: 1.3;
+  }
+
+}
