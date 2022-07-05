@@ -1,11 +1,10 @@
 @import './form/form-subscribe';
 @import './address';
-@import './user-nav';
 @import './social';
 
 .footer {
 
-  &__nav {
+  &__inner {
     display: flex;
     justify-content: space-between;
     padding-right: 75px;

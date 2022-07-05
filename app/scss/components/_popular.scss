@@ -19,13 +19,6 @@
     border-radius: 5px;
     transition:  color 0.6s, background-color 0.6s, outline 0.6s;
       
-    &.current {
-      background-color: $orange;
-      color: $white;
-      & .popular__icon {
-        fill: $white;
-      }
-    }
     &.mixitup-control-active {
       background-color: $orange;
       color: $white;
@@ -39,12 +32,12 @@
       background-color: rgba(255, 122, 80, 0.1);
       outline: 2px solid $orange;
       color: $orange;
+      .popular__icon {
+        fill: $orange;
+        transition: fill 0.6s;
+      }
     }
 
-    &:hover .popular__icon {
-      fill: $orange;
-      transition: fill 0.6s;
-    }
 
     &:focus {
       outline: 2px solid $orange;
@@ -87,7 +80,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 15px;
   background-color: $white;
   outline: 1px solid $silver200;
   border-radius: 5px;

@@ -1,10 +1,10 @@
 $( function() {
   
-  $('.user-nav__button--search').on('click', function(){
+  $('.button-search').on('click', function(){
     $('.form-search').toggleClass('active');
   });
 
-  $('.user-nav__button--basket').on('click', function(){
+  $('.button-basket').on('click', function(){
     $('.basket').toggleClass('active');
   });
 
@@ -12,6 +12,20 @@ $( function() {
     $('.basket').removeClass('active');
   });
   
+  $('.restaurant__catalog').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 3,
+    rows: 2,
+  });
+
+  $('.reviews__list').slick({
+    arrows: true,
+    dots: true,
+  
+  });
+
+
   var mixer = mixitup('.popular__category');
 
 });

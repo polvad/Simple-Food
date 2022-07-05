@@ -1,11 +1,11 @@
 .hero {
   
   &__inner {
-    height: calc(100vh - 279px);
+    height: 70vh;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: right center;
     background-size: 47% 100%;
   }
 

@@ -1,14 +1,14 @@
 .form-search {
-  display: none;
   width: 50%;
   position: absolute;
-  top: 120px;
+  top: -50px;
   left: 50%;
-  transform: translateX(-50%);
+  transform:  translate(-50%) ;
   font-size: 14px;
+  transition: transform 0.6s ease-out;
 
   &.active {
-    display: block;
+  transform:translate(-50%, 160px);
   }
 
   &__button {
