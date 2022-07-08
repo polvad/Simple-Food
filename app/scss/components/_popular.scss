@@ -2,6 +2,7 @@
   text-align: center;
   &__filter {
     display: flex;
+    align-items: center;
     margin-bottom: 45px;
   }
 
@@ -22,10 +23,9 @@
     &.mixitup-control-active {
       background-color: $orange;
       color: $white;
-    }
-
-    &.mixitup-control-active .popular__icon {
-      fill: $white;
+      .popular__icon {
+        fill: $white;
+      }
     }
 
     &:hover {
@@ -61,7 +61,7 @@
   &__category {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 30px;
+    grid-gap: 35px 30px ;
     margin-bottom: 60px;
   }
 
