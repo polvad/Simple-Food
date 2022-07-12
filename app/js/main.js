@@ -12,17 +12,9 @@ $( function() {
     $('.basket').removeClass('active');
   });
   
-  $('.restaurant__catalog').slick({
-    arrows: false,
-    dots: true,
-    slidesToShow: 3,
-    rows: 2,
-  });
-
   $('.reviews__list').slick({
     arrows: true,
     dots: true,
-  
   });
 
 

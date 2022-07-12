@@ -1,0 +1,50 @@
+.app {
+
+  &__inner {
+    min-height: 41vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 49% contain;
+    background-position: right 100%;
+
+  }
+
+  &__content {
+    max-width: 540px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &--store {
+      width: 120px;
+    }
+
+    &--play {
+      width: 135px;
+    }
+  }
+}
