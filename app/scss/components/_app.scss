@@ -35,9 +35,21 @@
 
   &__link {
     height: 40px;
+    border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition: outline 0.5s, box-shadow 0.5s, opacity 0.5s;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: 2px solid $orange;
+    }
+    &:active {
+      box-shadow: 5px 5px 5px $dark;
+    }
+
 
     &--store {
       width: 120px;
