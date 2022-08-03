@@ -64,6 +64,10 @@ body {
   &:active {
     opacity: 0.5;
   }
+
+  &__img {
+    object-fit: contain;
+  }
 }
 
 .button {
@@ -173,4 +177,153 @@ body {
   &::before {
     transform: rotate(45deg);
   }
+}
+
+.slick-navigation {
+
+  .slick-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 0;
+    width: 37px;
+    height: 37px;
+    border: 3px solid $gray;
+    border-radius: 50%;
+    z-index: 5;
+    transition: border-color 0.5s, outline 0.5s, background-color 0.5s;
+
+    &:hover {
+      border-color: #FFAE94;
+
+      .slick-navigation__icon {
+        fill: #FFAE94;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $orange;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border-color: transparent;
+
+      .slick-navigation__icon {
+        fill: $orange;
+      }
+    }
+
+  }
+
+  &__icon {
+    width: 10px;
+    height: 18px;
+    fill: $gray;
+    transition: fill 0.5s;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $gray;
+        transition: outline 0.5s, background-color 0.5s;
+
+        &:hover {
+          outline: 2px solid $orange;
+          background-color: #FFF2ED;
+        }
+
+        &:focus {
+          outline: 2px solid $orange;
+        }
+
+        &:active {
+          background-color: #FFAE94;
+        }
+      }
+    }
+
+    .slick-active {
+      button {
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+.fon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: $lg) {
+  .section {
+    padding-bottom: 80px;
+  }
+
+}
+
+@media (max-width: $lg) and (orientation: landscape) {
+  .section {
+    padding-bottom: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: $md) {
+  .text-link {
+    display: block;
+  }
+}
+
+@media (max-width: $sm) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    &__img--small {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
+  .section {
+    padding-bottom: 40px;
+  }
+
 }

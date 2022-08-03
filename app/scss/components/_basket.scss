@@ -1,14 +1,28 @@
 .basket {
-  position: absolute;
-  top: 120px;
-  right: 0;
-  transform: translateX(150%);
-  width: 40vw;
-  padding: 60px 40px;
-  background-color: $silver100;
-  text-align: center;
-  border: 1px solid $gray;
-  transition: transform 0.6s ease-out;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 10;
+  transition: opacity 0.6s;
+
+  &__inner {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    border: 1px solid $gray;
+    background-color: $silver100;
+    text-align: center;
+    overflow-y: auto;
+  }
 
   &__name {
     display: block;
@@ -31,7 +45,17 @@
   }
 
   &.active {
-    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
   }
 
+}
+
+
+@media (max-width: $lg) {
+  .basket {
+    &__inner {
+      width: 100%;
+    }
+  }
 }

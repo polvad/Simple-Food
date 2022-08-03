@@ -1,28 +1,42 @@
 .popular {
   text-align: center;
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
   &__filter {
     display: flex;
     align-items: center;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
+    overflow-x: auto;
+    padding: 3px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 20px;
+  &__item {
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   &__btn {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $darkblue;
     line-height: 1.3;
-    padding: 22px 32px 22px 86px;
+    padding: 13px 32px 13px 33px;
     background-color: $white;
     outline: 1px solid $silver200;
     border-radius: 5px;
-    transition:  color 0.6s, background-color 0.6s, outline 0.6s;
-      
+    transition: color 0.6s, background-color 0.6s, outline 0.6s;
+
     &.mixitup-control-active {
       background-color: $orange;
       color: $white;
+
       .popular__icon {
         fill: $white;
       }
@@ -32,6 +46,7 @@
       background-color: rgba(255, 122, 80, 0.1);
       outline: 2px solid $orange;
       color: $orange;
+
       .popular__icon {
         fill: $orange;
         transition: fill 0.6s;
@@ -49,27 +64,20 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
     object-fit: cover;
+    margin-right: 10px;
   }
 
   &__category {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 35px 30px ;
+    grid-gap: 30px;
     margin-bottom: 60px;
   }
 
   &__items {
     display: inline-flex;
   }
-  
-
 }
 
 .product-card {
@@ -85,18 +93,20 @@
   outline: 1px solid $silver200;
   border-radius: 5px;
 
+
   &:hover {
     outline: 1px solid $orange;
     transition: outline 0.4s;
   }
 
   &__link {
-    display: block;
     width: 100%;
-    text-align: center;
+    margin-bottom: 10px;
   }
+
   &__img {
     object-fit: cover;
+    margin: 0 auto;
   }
 
   &__name {
@@ -120,4 +130,85 @@
     padding: 7px 16px;
   }
 
+}
+
+
+@media (max-width: $xl) {
+  .popular__category {
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+
+  .product-card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .popular {
+    &__category {
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .popular {
+    &__category {
+      grid-template-columns: repeat(2, auto);
+
+    }
+
+    &__filter {
+      margin-bottom: 30px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 12px 16px 12px 16px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 18px;
+      margin-right: 5px;
+    }
+
+  }
+}
+
+@media (max-width: $sm) {
+  .popular {
+    &__title {
+      margin-bottom: 27px;
+    }
+
+    &__filter {
+      margin-bottom: 26px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 12px 16px 12px 16px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 18px;
+      margin-right: 5px;
+    }
+
+    &__category {
+      grid-gap: 10px 5px;
+      margin-bottom: 47px;
+    }
+  }
 }

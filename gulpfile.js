@@ -88,7 +88,7 @@ function htmlInclude() {
 }
 
 function svgSprites() {
-  return src('app/images/icons/svg/*.svg') 
+  return src('app/images/icons/*.svg') 
     .pipe(
       svgSprite({
         mode: {
@@ -102,7 +102,7 @@ function svgSprites() {
 }
 
 function svgSprites() {
-  return src('app/images/icons/svg/*.svg')
+  return src('app/images/icons/*.svg')
     .pipe(cheerio({
       run: ($) => {
         $("[fill]").removeAttr("fill"); 
@@ -146,7 +146,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/icons/svg/*.svg'], svgSprites);
+  watch(['app/images/icons/*.svg'], svgSprites);
 }
 
 

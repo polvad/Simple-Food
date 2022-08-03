@@ -2,8 +2,8 @@
     <div class="container">
         <div class="header__inner">
             <nav class="header__nav">
-                <a class="logo" href="#">
-                    <img class="logo__img" src="./images/icons/svg/SimpleFood.svg" width="200" height="39"
+                <a class="header__logo logo" href="#home-page">
+                    <img class="logo__img logo__img--small" src="./images/icons/SimpleFood.svg" width="200" height="39"
                         alt="Логотип сервиса доставки еды Simple Food">
                 </a>
                 <ul class="header__list">
@@ -23,12 +23,14 @@
                         </a>
                     </li>
                 </ul>
+
             </nav>
+
             <ul class="user-nav">
                 <li class="user-nav__item">
                     <button class="user-nav__button button-search" type="button">
                         <span class="sr-only">Искать на сайте</span>
-                        <svg class="user-nav__icon" width="18" height="18">
+                        <svg class="user-nav__icon" width="19" height="19">
                             <use xlink:href="images/sprite.svg#icon-search"></use>
                         </svg>
                     </button>
@@ -43,6 +45,95 @@
                     </button>
                 </li>
             </ul>
+            <button class="header__menu-btn" type="button">
+                <span class="sr-only">Кнопка откритие меню</span>
+                <span class="header__line"></span>
+            </button>
+            <div class="menu-mobile">
+                <div class="menu-mobile__top">
+                    <a class="menu-mobile__logo logo" href="#home-page">
+                        <img class="logo__img" src="./images/icons/SimpleFood.svg" width="200" height="39"
+                            alt="Логотип сервиса доставки еды Simple Food">
+                    </a>
+                    <button class="menu-mobile__btn close">
+                        <span class="sr-only">
+                            Закрыть меню
+                        </span>
+                    </button>
+                </div>
+                <ul class="menu-mobile__list">
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link current text-link" href="#home-page">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link text-link" href="#">
+                            Блюда
+                        </a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link text-link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <address class="menu-mobile__address address">
+                    <ul class="address__list">
+                        <li class="address__item">
+                            <span class="address__link text-link">
+                                <svg class="address__icon" width="24" height="24">
+                                    <use xlink:href="images/sprite.svg#icon-location"></use>
+                                </svg>
+                                ул. Шевченко, 1
+                            </span>
+                        </li>
+                        <li class="address__item">
+                            <a class="address__link text-link" href="tel:+380501112233">
+                                <svg class="address__icon" width="24" height="24">
+                                    <use xlink:href="images/sprite.svg#icon-calling"></use>
+                                </svg>
+                                380501112233
+                            </a>
+                        </li>
+                        <li class="address__item">
+                            <a class="address__link text-link" href="mailto:support@sfood.com">
+                                <svg class="address__icon" width="24" height="24">
+                                    <use xlink:href="images/sprite.svg#icon-message"></use>
+                                </svg>
+                                support@sfood.com
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon" width="10" height="20">
+                                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                                <span class="sr-only">Перейти на Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon" width="20" height="17">
+                                    <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                                </svg>
+                                <span class="sr-only">Перейти на Twitter</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon" width="20" height="20">
+                                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                                </svg>
+                                <span class="sr-only">Перейти на Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
             <form class="form-search" name="form-search">
                 <label class="form-search__label">
                     <span class="sr-only">Искать на сайте</span>
@@ -53,21 +144,24 @@
                 </button>
             </form>
 
-            <div class="basket">
-                <span class="basket__name">
-                    Ваша корзина пуста
-                </span>
-                <button class="close" type="button">
-                    <span class="sr-only">
-                        Закрыть корзину
-                    </span>
-                </button>
-                <p class="basket__text">
-                    Посмотрите наш каталог и выберите те товары, которые вас заинтересуют.
-                </p>
-                <a class="basket__link button" href="#">каталог</a>
-            </div>
         </div>
-
     </div>
+    <div class="basket">
+        <div class="basket__inner">
+            <span class="basket__name">
+                Ваша корзина пуста
+            </span>
+            <button class="close" type="button">
+                <span class="sr-only">
+                    Закрыть корзину
+                </span>
+            </button>
+            <p class="basket__text">
+                Посмотрите наш каталог и выберите те товары, которые вас заинтересуют.
+            </p>
+            <a class="basket__link button" href="#">каталог</a>
+        </div>
+    </div>
+    <span class="fon"></span>
+
 </header>

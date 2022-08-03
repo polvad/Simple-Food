@@ -1,9 +1,9 @@
 .social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 13px;
+  justify-content: start;
 
-  &__item:not(:last-child) {
-    margin-right: 13px;
-  }
 
   &__link {
     display: flex;

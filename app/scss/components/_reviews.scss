@@ -1,132 +1,21 @@
 .reviews {
-  padding-bottom: 131px;
+  position: relative;
 
   &__title {
     margin-bottom: 45px;
   }
 
-  &__list {
+  &__row {
     position: relative;
     max-width: 990px;
     margin: 0 auto;
-
-    .slick-list {
-      overflow: hidden;
-    }
-
-    .slick-track {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .slick-dots {
-      display: flex;
-      justify-content: center;
-
-      li {
-        &:not(:last-child) {
-          margin-right: 15px;
-        }
-
-        button {
-          font-size: 0;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: $gray;
-          transition: outline 0.5s, background-color 0.5s;
-
-          &:hover {
-            outline: 2px solid $orange;
-            background-color: #FFF2ED;
-          }
-
-          &:focus {
-            outline: 2px solid $orange;
-          }
-
-          &:active {
-            background-color: #FFAE94;
-          }
-        }
-      }
-
-      .slick-active {
-        button {
-          background-color: $orange;
-        }
-      }
-
-    }
-
-    .slick-arrow {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      font-size: 0;
-      width: 34px;
-      height: 34px;
-      border: 3px solid $gray;
-      border-radius: 50%;
-      z-index: 5;
-      transition: border-color 0.5s, outline 0.5s, background-color 0.5s;
-
-      &:hover {
-        border-color: #FFAE94;
-
-        &::after {
-          color: #FFAE94;
-        }
-      }
-
-      &:focus {
-        outline: 2px solid $orange;
-      }
-
-      &:active {
-        background-color: #FFF2ED;
-        border-color: transparent;
-
-        &::after {
-          color: $orange;
-        }
-      }
-
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        color: $gray;
-        transition: color 0.5s;
-      }
-    }
-
-    .slick-arrow.slick-prev {
-      transform: translateX(-110px);
-
-      &::after {
-        content: '<';
-      }
-    }
-
-    .slick-arrow.slick-next {
-      transform: translateX(75px);
-
-      &::after {
-        content: '>';
-      }
-    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 40px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
   }
 
   &__img {
@@ -135,10 +24,11 @@
   }
 
   &__content {
-    max-width: 570px;
+    max-width: 650px;
+    padding: 0 40px;
   }
 
-  p {
+  &__text {
     position: relative;
     font-style: italic;
     margin-bottom: 30px;
@@ -150,33 +40,136 @@
       width: 24px;
       height: 20px;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
     }
 
     &::before {
       top: 0;
       left: -40px;
-      background-image: url('../images/icons/svg/icon-quotesL.svg');
+      background-image: url('../images/icons/icon-quotesL.svg');
     }
 
     &::after {
       bottom: 0;
       right: -40px;
-      background-image: url('../images/icons/svg/icon-quotesR.svg');
+      background-image: url('../images/icons/icon-quotesR.svg');
     }
   }
 
-  cite {
+  &__name-customer {
     display: block;
     font-weight: 600;
     line-height: 1.3;
     color: $orange;
-    margin-bottom: 15px;
   }
 
   &__about-customer {
+    margin-top: 15px;
+    display: block;
     font-size: 14px;
     line-height: 1.2;
+    color: $dark;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slick-prev {
+      margin-right: 20px;
+    }
+
+    .slick-next {
+      order: 2;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .reviews {
+    padding-bottom: 80px;
+
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+    }
+
+    &__img {
+      margin-bottom: 30px;
+    }
+
+    &__navigation {
+      .slick-arrow {
+        position: absolute;
+        top: 30%;
+      }
+
+      .slick-prev {
+        left: 14%;
+      }
+
+      .slick-next {
+        right: 14%;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) and (orientation: landscape) {
+  .reviews {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: $sm) {
+  .reviews {
+    padding-bottom: 30px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__content {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+
+      &::after,
+      &::before {
+        width: 30px;
+        height: 20px;
+        background-size: contain;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: 10px;
+      }
+    }
+
+    &__about-customer {
+      font-weight: 400;
+    }
+
+    &__navigation {
+      .slick-arrow {
+        top: 20%;
+      }
+    }
   }
 }

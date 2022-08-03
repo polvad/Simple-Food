@@ -1,0 +1,66 @@
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 80%;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateX(-100%);
+  z-index: 15;
+  transition: transform 0.8s;
+  overflow-y: auto;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    border-bottom: 1px solid #EEEFF3;
+  }
+
+  &__btn {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 1px;
+      background-color: #000;
+    }
+
+    &::after {
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    &::before {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+
+  &__list {
+    padding: 15px;
+    border-bottom: 1px solid #EEEFF3;
+  }
+
+  &__link {
+    padding: 7px 0;
+  }
+
+  &__address {
+    padding: 15px 0 15px 15px;
+    margin-bottom: 8px;
+  }
+
+}
