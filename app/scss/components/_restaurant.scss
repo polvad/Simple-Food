@@ -45,6 +45,9 @@
     line-height: 1.2;
     color: $dark;
     margin-bottom: 20px;
+    &--null {
+      margin-bottom: 0;
+    }
   }
 
   &__bottom {

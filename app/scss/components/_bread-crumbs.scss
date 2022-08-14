@@ -1,0 +1,40 @@
+.bread-crumbs {
+  background-color: $orange-light;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #505050;
+    margin-right: 17px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: -12px;
+      background-image: url('../images/icons/icon-next.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 6px;
+      height: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+}

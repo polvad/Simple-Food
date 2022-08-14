@@ -1,0 +1,92 @@
+.form-select {
+  &__item {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  .jq-selectbox {
+    z-index: 1;
+
+    &__select {
+      position: relative;
+      border: 1px solid #C2C2C2;
+      border-radius: 3px;
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 15px 41px 15px 15px;
+      letter-spacing: 0.03em;
+    }
+
+    &__trigger {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 100%;
+
+      &-arrow {
+        position: absolute;
+        top: 55%;
+        left: 15%;
+        transform: translateX(-50%);
+
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          width: 10px;
+          height: 1px;
+          background-color: $gray;
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(50%);
+        }
+
+        &::before {
+          transform: rotate(45deg) translate(-50%);
+        }
+      }
+    }
+
+    &__dropdown ul {
+      border: 1px solid #C2C2C2;
+      border-radius: 0 0 3px 3px;
+      background-color: $white;
+
+      li {
+        font-size: 14px;
+        padding: 10px 41px 10px 15px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #C2C2C2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .form-select {
+    .jq-selectbox {
+      &__select {
+        padding: 15px 36px 15px 10px;
+      }
+    }
+
+    &__dropdown ul {
+      li {
+        padding: 10px 36px 10px 15px;
+
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 2px;
+    }
+  }
+}

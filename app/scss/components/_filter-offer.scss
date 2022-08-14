@@ -1,0 +1,73 @@
+.filter-offer {
+  @extend %filter-style;
+  margin-bottom: 30px;
+
+  &__form {
+    padding: 25px 15px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      .filter-offer__text {
+        color: $orange;
+      }
+
+      .filter-offer__checkbox {
+        outline: 1px solid $orange;
+      }
+    }
+
+    &:focus {
+      .filter-offer__checkbox {
+        outline: 1px solid $orange;
+      }
+    }
+  }
+
+  &__input:checked+.filter-offer__checkbox {
+    background-image: url('../images/icons/icon-checkedarrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: 1px solid $darkblue;
+  }
+
+  &__checkbox {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #FAEDED;
+    border-radius: 3px;
+    margin-right: 12px;
+    transition: outline 0.6s;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+    transition: color 0.6s;
+  }
+}
+
+@media (max-width: $md) {
+  .filter-offer {
+    &__form {
+      padding: 20px 15px;
+    }
+
+    &__label {
+      padding: 6px 0;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

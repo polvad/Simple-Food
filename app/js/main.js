@@ -35,10 +35,15 @@ $(function () {
     $('.menu-mobile').toggleClass('active');
     $('.fon').addClass('active');
   });
+  $('.catalog-product__filter-btn').on('click', function () {
+    $('.catalog-product__filters').addClass('active');
+    $('.fon').addClass('active');
+  });
 
-  $('.menu-mobile__btn, .menu-mobile a, .address__link').on('click', function () {
+  $('.menu-mobile__btn, .menu-mobile a, .address__link, .catalog-product__close, .filter-category__link').on('click', function () {
     $('.menu-mobile').removeClass('active');
     $('.fon').removeClass('active');
+    $('.catalog-product__filters').removeClass('active');
   });
 
 
@@ -82,8 +87,76 @@ if ($(document).width() <= 800) {
 }
 });
 
-  
-  var mixer = mixitup('.popular__category');
+$('.form-select__item').styler();
+
+
+
+var mixer = mixitup('.popular__category');
+
 
 });
 
+
+
+var $range = $(".filter-price__input");
+    var $inputFrom = $(".filter-price__field--from");
+    var $inputTo = $(".filter-price__field--to");
+    var instance;
+    var min = 0;
+    var max = 1000;
+    var from = 0;
+    var to = 0;
+    
+    $range.ionRangeSlider({
+        type: "double",
+        min: min,
+        max: max,
+       
+        onStart: updateInputs,
+        onChange: updateInputs,
+        onFinish: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+    
+    function updateInputs (data) {
+        from = data.from;
+        to = data.to;
+    
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+    
+    $inputFrom.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+    
+        instance.update({
+            from: val
+        });
+    
+        $(this).prop("value", val);
+    
+    });
+    
+    $inputTo.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+    
+        instance.update({
+            to: val
+        });
+    
+        $(this).prop("value", val);
+    });

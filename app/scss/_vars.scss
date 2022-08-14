@@ -1,11 +1,12 @@
 $orange: #ff6838;
+$orange-light: #FF7A501A;
 $white: #fff;
 $silver100: #f9faff;
 $silver200: #ececec;
 $gray: #c2c2c2;
 $darkblue: #363853;
 $dark: #31352b;
-
+$pink-light: #FAEDED;
 
 
 $sm: 576px;
@@ -15,3 +16,10 @@ $lg-small: 900px;
 $lg: 992px;
 $xl-small: 1100px;
 $xl: 1200px;
+
+%filter-style {
+  background-color: $white;
+  outline: 1px solid $silver200;
+  border-radius: 5px;
+  letter-spacing: 0.03em;
+}

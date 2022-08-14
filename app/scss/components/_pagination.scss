@@ -1,0 +1,71 @@
+.pagination {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: $pink-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.6s, background-color 0.6s, outline 0.6s, box-shadow 0.6s;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+
+      .pagination__icon {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $orange;
+    }
+
+    &:active {
+      box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    &.current {
+      outline: 1px solid $darkblue;
+    }
+
+    &.disabled {
+      .pagination__icon {
+        fill: $gray;
+      }
+    }
+
+  }
+
+  &__icon {
+    width: 11px;
+    height: 18px;
+    fill: $darkblue;
+    transition: fill 0.6s;
+  }
+}
+
+@media (max-width: $sm) {
+  .pagination {
+    &__item {
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
