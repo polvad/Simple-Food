@@ -39,6 +39,15 @@ body {
   border-bottom: 1px solid $silver200;
 }
 
+.tabs-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $darkblue;
+  margin-bottom: 30px;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -232,6 +241,12 @@ body {
     height: 18px;
     fill: $gray;
     transition: fill 0.5s;
+
+    &--big {
+      width: 19px;
+      height: 32px;
+      fill: $darkblue;
+    }
   }
 
   .slick-dots {
@@ -294,6 +309,9 @@ body {
   }
 }
 
+.rateyo {
+  z-index: 1;
+}
 
 @media (max-width: $lg) {
   .section {
@@ -324,6 +342,10 @@ body {
   .title {
     font-size: 24px;
     margin-bottom: 30px;
+  }
+
+  .tabs-title {
+    font-size: 20px;
   }
 
   .logo {

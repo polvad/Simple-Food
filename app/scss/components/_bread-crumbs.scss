@@ -14,7 +14,7 @@
     letter-spacing: 0.03em;
     color: #505050;
     margin-right: 17px;
-
+    
     &::after {
       content: '';
       position: absolute;
@@ -23,7 +23,7 @@
       background-image: url('../images/icons/icon-next.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       width: 6px;
       height: 10px;
     }
@@ -37,4 +37,30 @@
     }
   }
 
+  &__link {
+    transition: text-decoration 0.5s, color 0.5s;
+
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: darken($orange, 35%);
+    }
+
+    &:active {
+      text-shadow: 0 0 2px darken($orange, 1%);
+    }
+  }
+
+}
+
+@media (max-width: $sm) {
+  .bread-crumbs {
+    &__item {
+      &.hidden {
+        display: none;
+      }
+    }
+  }
 }

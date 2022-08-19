@@ -1,0 +1,129 @@
+.form-feedback {
+  line-height: 1.3;
+
+  &__stars {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    padding-left: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__response {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    line-height: 1.3;
+    color: #505050;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    background-color: $white;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 18px 18px 15px;
+    margin-top: 15px;
+    transition: outline 0.5s, color 0.6s;
+
+    &--textarea {
+      padding: 16px 18px;
+      min-height: 165px;
+      resize: vertical;
+    }
+
+    &::placeholder {
+      color: #C1C1C1;
+      transition: color 0.6s;
+    }
+
+    &:hover::placeholder {
+      color: #413e3ec9;
+    }
+
+    &:focus {
+      outline: 1px solid $orange;
+    }
+  }
+
+  &__info {
+    max-width: 260px;
+    width: 100%;
+  }
+
+  &__save {
+    font-size: 18px;
+    display: flex;
+    margin-bottom: 25px;
+    padding-right: 5px;
+  }
+
+  &__save-input:checked+.form-feedback__checkbox {
+    background-image: url('../images/icons/icon-checkedarrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    border: 1px solid #C1C1C1;
+    border-radius: 3px;
+    margin-right: 10px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    padding: 12px 32px;
+  }
+
+}
+
+@media (max-width: $md) {
+  .form-feedback {
+
+    &__inner {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    &__response {
+      margin-bottom: 13px;
+      max-width: 100%;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__label:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      letter-spacing: 0.03em;
+      font-size: 18px;
+    }
+  }
+}

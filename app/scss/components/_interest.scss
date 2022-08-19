@@ -1,0 +1,53 @@
+.interest {
+
+  &__title {
+    text-align-last: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+
+    .slick-prev {
+      margin-right: 25px;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    .slick-dots {
+      position: absolute;
+      bottom: -42px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item {
+    height: 299px;
+  }
+
+  .slick-track {
+    padding: 2px;
+  }
+
+}
+
+@media (max-width: $sm) {
+  .interest {
+    padding-bottom: 85px;
+
+    &__title {
+      font-size: 21px;
+      line-height: 1.2;
+    }
+  }
+}
+@media (max-width: $md) and (orientation: landscape) {
+  .interest {
+    padding-bottom: 85px;
+  }
+}
