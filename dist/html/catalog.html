@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Food | Страница каталога</title>
+    <link rel="icon" type="image/png" href="./images/favicons/favicon32x32.png">
+    <link rel="icon" type="image/png" href="./images/favicons/favicon512x512.png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    @include('components/header.html')
+
+    <main class="main">
+        <div class="bread-crumbs">
+            <div class="container">
+                <ul class="bread-crumbs__list">
+                    <li class="bread-crumbs__item">
+                        <a class="bread-crumbs__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="bread-crumbs__item">
+                        Каталог товаров
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        @include('components/catalog-product.html')
+        @include('components/app.html')
+        @include('components/action.html')
+    </main>
+
+    @include('components/footer.html')
+
+    @include('components/footer-scripts.html')
+</body>
+
+</html>

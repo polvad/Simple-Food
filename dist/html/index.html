@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Food | Главная страница</title>
+    <link rel="icon" type="image/png" href="./images/favicons/favicon32x32.png">
+    <link rel="icon" type="image/png" href="./images/favicons/favicon512x512.png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="home-page">
+
+
+
+    @include('components/header.html')
+    <main class="main">
+        @include('components/hero.html')
+        @include('components/popular.html')
+        @include('components/features.html')
+        @include('components/restaurant.html')
+        @include('components/reviews.html')
+        @include('components/app.html')
+    </main>
+
+
+    @include('components/footer.html')
+
+    @include('components/footer-scripts.html')
+</body>
+
+</html>
