@@ -53,8 +53,8 @@ $(function () {
     dots: true,
     appendArrows: $('.reviews__navigation'),
     appendDots: $('.reviews__navigation'),
-    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon"><use xlink:href="../images/sprite.svg#icon-prev"></use></svg></button>',
-    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon"><use xlink:href="../images/sprite.svg#icon-next"></use></svg></button>',
+    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon"><use xlink:href="./images/sprite.svg#icon-prev"></use></svg></button>',
+    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon"><use xlink:href="./images/sprite.svg#icon-next"></use></svg></button>',
     
     responsive: [{
         breakpoint: 992,
@@ -88,8 +88,8 @@ if ($(document).width() <= 800) {
 });
 
 $('.product__slider').slick({
-    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon slick-navigation__icon--big"><use xlink:href="../images/sprite.svg#icon-prev"></use></svg></button>',
-    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon slick-navigation__icon--big"><use xlink:href="../images/sprite.svg#icon-next"></use></svg></button>',
+    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon slick-navigation__icon--big"><use xlink:href="./images/sprite.svg#icon-prev"></use></svg></button>',
+    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon slick-navigation__icon--big"><use xlink:href="./images/sprite.svg#icon-next"></use></svg></button>',
     responsive: [
       {
       breakpoint: 576,
@@ -107,8 +107,8 @@ $('.interest__list').slick({
     waitForAnimate: false,
     adaptiveHeight: true,
     appendArrows: $('.interest__nav'),
-    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon"><use xlink:href="../images/sprite.svg#icon-prev"></use></svg></button>',
-    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon"><use xlink:href="../images/sprite.svg#icon-next"></use></svg></button>',
+    prevArrow: '<button class="slick-prev" type="button" aria-label="прошлий слайд"><svg class="slick-navigation__icon"><use xlink:href="./images/sprite.svg#icon-prev"></use></svg></button>',
+    nextArrow: '<button class="slick-next" type="button" aria-label="следующий слайд"><svg class="slick-navigation__icon"><use xlink:href="./images/sprite.svg#icon-next"></use></svg></button>',
     responsive: [
       {
       breakpoint: 1200,
@@ -146,7 +146,7 @@ $('.rateyo').rateYo({
   normalFill: "#C1C1C14D",
   ratedFill: "#FFB800",
   fullStar: true,
-  starSvg: '<svg><use xlink:href="../images/sprite.svg#icon-star"></use></svg>'
+  starSvg: '<svg><use xlink:href="./images/sprite.svg#icon-star"></use></svg>'
 });
 
 $('.response__star').rateYo({
@@ -156,7 +156,7 @@ $('.response__star').rateYo({
   normalFill: "#C1C1C14D",
   ratedFill: "#FFB800",
   fullStar: true,
-  starSvg: '<svg><use xlink:href="../images/sprite.svg#icon-star"></use></svg>'
+  starSvg: '<svg><use xlink:href="./images/sprite.svg#icon-star"></use></svg>'
 });
 
 
