@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food | Страница Чизбургера с листьями салата</title>
+  <link rel="icon" type="image/png" href="./images/favicons/favicon32x32.png">
+  <link rel="icon" type="image/png" href="./images/favicons/favicon512x512.png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  @include('components/header.html')
+
+  <main class="main">
+    <div class="bread-crumbs">
+      <div class="container">
+        <ul class="bread-crumbs__list">
+          <li class="bread-crumbs__item">
+            <a class="bread-crumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="bread-crumbs__item hidden">
+            <a class="bread-crumbs__link" href="catalog.html"> Каталог товаров</a>
+          </li>
+          <li class="bread-crumbs__item">
+            Чизбургер с листьями салата
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="product">
+      <div class="container">
+        <div class="product__top">
+          <ul class="product__slider">
+            <li class="product__slide">
+              <img class="product__img" data-fancybox="gallery" src="../images/product/burger/cheseburgerList.jpg"
+                width="400" height="400" alt="Чизбургер с листьями салата">
+            </li>
+            <li class="product__slide">
+              <img class="product__img" data-fancybox="gallery" src="../images/product/burger/cheseburgerList.jpg"
+                width="400" height="400" alt="Чизбургер с листьями салата">
+            </li>
+            <li class="product__slide">
+              <img class="product__img" data-fancybox="gallery" src="../images/product/burger/cheseburgerList.jpg"
+                width="400" height="400" alt="Чизбургер с листьями салата">
+            </li>
+          </ul>
+          <div class="product__content">
+            <h2 class="product__title title">
+              Чизбургер с листьями салата
+            </h2>
+            <span class="product__star rateyo" data-rateyo-rating="4"></span>
+            <span class="product__price">160 грн</span>
+            <div class="counter">
+              <div class="counter__inner">
+                <div class="counter__label">
+                  <button class="counter__btn counter__btn--minus" type="button">
+                    <span class="sr-only">
+                      Вычесть одну единицу товара
+                    </span>
+                    <svg class="counter__icon" width="20" height="2">
+                      <use xlink:href="../images/sprite.svg#icon-minus"></use>
+                    </svg>
+                  </button>
+                  <input class="counter__value" type="text" value="1">
+                  <button class="counter__btn counter__btn--plus" type="button">
+                    <span class="sr-only">
+                      Добавить одну единицу товара
+                    </span>
+                    <svg class="counter__icon" width="20" height="20">
+                      <use xlink:href="../images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="counter__button-basket button" type="button">
+                  <svg class="counter__icon-cart" width="16" height="16">
+                    <use xlink:href="./images/sprite.svg#icon-cart"></use>
+                  </svg>
+                  Добавить в корзину
+                </button>
+              </div>
+            </div>
+            <h3 class="product__subtitle">
+              Доставка и оплата
+            </h3>
+            <ul class="product__list">
+              <li class="product__item">
+                Минимальная сумма заказа — <span>160</span> <span class="currency">грн</span>.
+              </li>
+              <li class="product__item">
+                Время доставки заказа — <time>80</time> - <time>140</time> мин.
+              </li>
+              <li class="product__item">
+                Оплата осуществляется только банковской картой.
+              </li>
+              <li class="product__item">
+                Окончательная сумма заказа формируется после сбора товаров.
+              </li>
+            </ul>
+            <a class="product__link link-details" href="#">
+              Подробнее
+            </a>
+          </div>
+        </div>
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <button class="tabs__btn" type="button" data-tab="#tabs-1">
+                Описание
+              </button>
+            </li>
+            <li class="tabs__item">
+              <button class="tabs__btn" type="button" data-tab="#tabs-2">
+                Характеристики
+              </button>
+            </li>
+            <li class="tabs__item">
+              <button class="tabs__btn" type="button" data-tab="#tabs-3">
+                Отзывы
+                <span class="tabs__order">(2)</span>
+              </button>
+            </li>
+          </ul>
+          <div class="tabs__content1 tabs__content" id="tabs-1">
+            <p class="tabs__content1-text">
+              Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+              горчицей, луком и маринованными огурчиками.
+            </p>
+            <p class="tabs__content1-text">
+              Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута.
+            </p>
+            <p class="tabs__content1-text">
+              Внешний вид товара может отличаться от изображений, представленных на сайте.
+            </p>
+          </div>
+
+          <ul class="tabs__content2 tabs__content" id="tabs-2">
+            <li class="tabs__content2-item">
+              Диаметр:
+              <span class="tabs__content2-order">20 см</span>
+            </li>
+            <li class="tabs__content2-item">
+              Вес:
+              <span class="tabs__content2-order">300 гр</span>
+            </li>
+            <li class="tabs__content2-item">
+              Калорийность (на 100г):
+              <span class="tabs__content2-order">295 ккал</span>
+            </li>
+            <li class="tabs__content2-item">
+              Срок хранения:
+              <span class="tabs__content2-order">до 3 дней</span>
+            </li>
+          </ul>
+          <div class="tabs__content3 tabs__content" id="tabs-3">
+            <div class="response">
+              <h3 class="tabs-title">
+                Мнения наших клиентов
+              </h3>
+              <article class="response__item">
+                <div class="response__inner">
+                  <div class="response__left">
+                    <img class="response__avatar" src="./images/avatar.jpg" width="70" height="70" alt="Клиент Андрей">
+                    <div class="response__info">
+                      <h4 class="response__name">
+                        Андрей
+                      </h4>
+                      <time class="response__time" datetime="2021-06-10">10.06.2021</time>
+                    </div>
+                  </div>
+                  <div class="response__right">
+                    <span class="response__star" data-rateyo-rating="5"></span>
+                  </div>
+                </div>
+                <p class="response__text">
+                  Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+                </p>
+              </article>
+              <article class="response__item">
+                <div class="response__inner">
+                  <div class="response__left">
+                    <img class="response__avatar" src="./images/avatar.jpg" width="70" height="70"
+                      alt="Клиент Екатерина Белая">
+                    <div class="response__info">
+                      <h4 class="response__name">
+                        Екатерина Белая
+                      </h4>
+                      <time class="response__time" datetime="2021-06-07">7.06.2021</time>
+                    </div>
+                  </div>
+                  <div class="response__right">
+                    <span class="response__star" data-rateyo-rating="4"></span>
+                  </div>
+                </div>
+                <p class="response__text">
+                  этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                  отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+                </p>
+              </article>
+            </div>
+
+            <div class="feedback">
+              <h3 class="tabs-title">
+                Оставить отзыв
+              </h3>
+              <form class="form-feedback" action="#" name="feedback">
+                <div class="form-feedback__stars">
+                  Ваша оценка *
+                  <span class="form-feedback__star rateyo" data-rateyo-rating="0"></span>
+                </div>
+                <div class="form-feedback__inner">
+                  <div class="form-feedback__response">
+                    <label class="form-feedback__label">
+                      Ваш отзыв *
+                      <textarea class="form-feedback__field form-feedback__field--textarea" name="response"
+                        placeholder="Введите текст отзыва" required></textarea>
+                    </label>
+                  </div>
+                  <div class="form-feedback__info">
+                    <label class="form-feedback__label" for="">
+                      Имя
+                      <input class="form-feedback__field" type="text" name="name" placeholder="Введите ваше имя"
+                        required>
+                    </label>
+                    <label class="form-feedback__label" for="">
+                      Email *
+                      <input class="form-feedback__field" type="email" name="email" placeholder="youremail@mail.com"
+                        required>
+                    </label>
+                  </div>
+                </div>
+                <label class="form-feedback__save">
+                  <input class="form-feedback__save-input sr-only" type="checkbox" name="save-info">
+                  <span class="form-feedback__checkbox"></span>
+
+                  Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+
+                </label>
+                <button class="form-feedback__btn button" type="submit">
+                  Оставить отзыв
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    @include('components/interest.html')
+  </main>
+
+  @include('components/footer.html')
+
+  @include('components/footer-scripts.html')
+</body>
+
+</html>
