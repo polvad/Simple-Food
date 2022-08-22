@@ -129,7 +129,7 @@ $('.interest__list').slick({
         slidesToShow: 2,
         arrows: false,
         dots:true,
-        // infinite: false,
+        infinite: false,
       }
       }
       ]
